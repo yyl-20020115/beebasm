@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.10)
 
 project(beebasm LANGUAGES CXX)
 
-add_compile_options(-Wall -W -Wcast-qual -Wshadow -Wcast-align -Wold-style-cast -Woverloaded-virtual)
+#add_compile_options(-Wall -W -Wcast-qual -Wshadow -Wcast-align -Wold-style-cast -Woverloaded-virtual)
 
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -11,7 +11,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 FILE(GLOB CPPSources src/*.cpp)
 
 add_executable(beebasm ${CPPSources})
-target_link_libraries(beebasm stdc++ m)
+#target_link_libraries(beebasm stdc++ m)
 
 install(TARGETS beebasm DESTINATION bin)
 install(FILES ${CMAKE_SOURCE_DIR}/beebasm.1 DESTINATION share/man/man1)
